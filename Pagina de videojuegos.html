@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa de Videojuegos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        nav ul li {
+            margin: 0 1em;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .logo {
+            margin-right: auto;
+            margin-left: 1em;
+        }
+        .logo img {
+            height: 40px;
+        }
+        header {
+            position: relative;
+            height: 30vh; /* Cambiado para que no sea tan grande */
+            overflow: hidden;
+        }
+        .slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: slide 12s infinite;
+        }
+        .slide {
+            width: 100%;
+            height: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @keyframes slide {
+            0%, 33.33% { transform: translateX(0%); }
+            33.33%, 66.66% { transform: translateX(-100%); }
+            66.66%, 100% { transform: translateX(-200%); }
+        }
+        section {
+            padding: 4em 2em;
+            background-color: #fff;
+            margin: 1em 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .game-library {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .game {
+            margin: 1em;
+            text-align: center;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            padding: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .game:hover {
+            transform: translateY(-5px);
+        }
+        .game img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin-top: 0.5em;
+            color: #fff;
+            background-color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .download-button:hover {
+            background-color: #555;
+        }
+        .team-member {
+            margin: 1em;
+            text-align: center;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            padding: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1em;
+        }
+        .team-member h3 {
+            margin: 0.5em 0 0.3em;
+        }
+        .team-member p {
+            margin: 0.3em 0;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            padding: 0.5em 1em;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #333;
+            color: #fff;
+        }
+        .about {
+            text-align: justify;
+        }
+        .purpose{
+            text-align: justify;
+        }
+        .social-media {
+            margin-top: 1em;
+        }
+        .social-media a {
+            margin: 0 0.5em;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-media a:hover {
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="Image/logo de empresa bueno 2.png" alt="Logo de la empresa">
+        </div>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#purpose">Propósito</a></li>
+            <li><a href="#downloads">Descargas</a></li>
+            <li><a href="#team">Nuestro Equipo</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="slider" id="home">
+            <div class="slides">
+                <div class="slide"><img src="Image/AceGames 2.jpg" alt="Slide 1"></div>
+                <div class="slide"><img src="Image/Informacion.jpg" alt="Slide 2"></div>
+                <div class="slide"><img src="Image/portada.jpg" alt="Slide 3"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>En Ace Games, creemos que cada videojuego es un viaje único y emocionante que espera ser explorado. Somos una empresa dedicada a romper barreras y redefinir el entretenimiento digital con experiencias interactivas inolvidables. Nuestro equipo de visionarios y creativos apasionados se une para transformar ideas audaces en realidades jugables, fusionando arte, tecnología y narrativa de una manera que no solo entretiene, sino que también inspira.
+
+            Nos comprometemos a ofrecer a los jugadores de todo el mundo aventuras que desafíen la imaginación y estimulen la mente. Desde paisajes fantásticos y mundos distópicos hasta historias íntimas llenas de emoción y reflexión, cada uno de nuestros juegos está diseñado para dejar una huella duradera en tu memoria.
+
+            En Ace Games, no solo creamos juegos; creamos universos, contamos historias y forjamos conexiones. Bienvenido a nuestro mundo, donde la innovación y la pasión se encuentran en cada píxel. ¡Prepárate para jugar, soñar y descubrir!</p>
+    </section>
+
+    <section id="purpose" class="purpose">
+        <h2>Propósito</h2>
+        <p>Nuestra misión es ofrecer experiencias de juego únicas y memorables que entretengan e inspiren a los jugadores de todo el mundo. Creemos en el poder del juego para contar historias y conectar a las personas.
+            <br>
+            En Ace Games, nuestro propósito es transformar el mundo del entretenimiento digital a través de la creación de experiencias de juego únicas y emocionalmente resonantes. Nos dedicamos a innovar constantemente, utilizando las últimas tecnologías y técnicas de diseño para ofrecer juegos que no solo entretengan, sino que también inspiren y desafíen a los jugadores.
+
+Creemos en el poder del juego para contar historias poderosas, conectar a personas de diversas culturas y fomentar la creatividad. Nuestro objetivo es crear mundos inmersivos y narrativas envolventes que ofrezcan a los jugadores la oportunidad de explorar, aprender y crecer. Queremos que cada uno de nuestros juegos sea una aventura inolvidable, capaz de despertar la imaginación y estimular la mente.
+
+En Ace Games, nos esforzamos por ser un faro de creatividad e innovación en la industria de los videojuegos, comprometidos con la excelencia y la pasión en todo lo que hacemos. Nuestro propósito es dejar una huella positiva y duradera en la vida de nuestros jugadores y en la comunidad global de videojuegos.
+        </p>
+    </section>
+
+    <section id="downloads">
+        <h2>Descargas</h2>
+        <div class="game-library">
+            <div class="game">
+                <img src="Image/Videojuegos.jpg" alt="Game 1">
+                <h3>Purpose in the Hell</h3>
+                <p>Trata de sobrevivir y poder conocer tu proposito en este extraño lugar en el que apareciste.</p>
+                <a href="descarga-juego1.zip" class="download-button">Descargar</a>
+            </div>
+            
+            <!-- Añade más juegos según sea necesario -->
+        </div>
+    </section>
+
+    <section id="team">
+        <h2>Nuestro Equipo</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="Image/kenny.jpg" alt="miembro1">
+                <h3>Kenny</h3>
+                <p>Soy Kenny, me gustan los videojuegos y todo lo que tenga que ver con ello, incluso escucho música de videojuegos :D
+                    Me gusta ser una persona amable con las personas que aprecio y ayudarlas cuando esté dentro de mis posibilidades, aún así también me encanta llevarme pesado con ellos.
+                    Realmente no me llamo Kenny pero todos me llaman así, mi nombre en realidad es Luis Fernando y soy parte de AceGames.</p>
+            </div>
+            <div class="team-member">
+                <img src="Image/Mai.jpg" alt="miembro2">
+                <h3>Mainnie</h3>
+                <p>Soy Mainnie, me gusta el anime, los videojuegos y el k-pop, mi anime favorito actualmente es Haikyu!!, soy creativa y muy perfeccionista, me gusta mucho diseñar y programar. Soy una persona amable, cada que tengo la oportunidad trato de ayudar a los demás, me gusta el color menta. Mi verdadero nombre es Mairene, espero contar con su apoyo en nuestros próximos proyectos!!.</p>
+            </div>
+            <div class="team-member">
+                <img src="Image/Mauricio.jpg" alt="miembro3">
+                <h3>Mauricio</h3>
+                <p>Eres una persona con intereses diversos en el ámbito tecnológico y de desarrollo de software. Te enfocas en proyectos de creación de videojuegos 2D utilizando Unity, con inspiración en títulos como "Enter the Gungeon". Además, tienes habilidades en desarrollo web, especialmente en la creación de sitios con funcionalidades CRUD (Crear, Leer, Actualizar, Borrar) utilizando HTML, PHP y MySQL en phpMyAdmin. Te interesa también la generación de reportes detallados, como los de cursos registrados en tus aplicaciones web.</p>
+            </div>
+            <div class="team-member">
+                <img src="Image/carlos.jpg" alt="miembro4">
+                <h3>Carlos</h3>
+                <p>Carlos es una persona apasionada por el gimnasio y el fútbol. Dedica tiempo regularmente a entrenar y mantenerse en forma, disfrutando tanto del desafío físico como de la disciplina que estos deportes requieren. Además de su afición por el ejercicio y el deporte, Carlos es conocido por su buen carácter y amabilidad, siempre dispuesto a ayudar a los demás y mantener una actitud positiva.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message"></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p> &copy; 2024 Empresa de Videojuegos. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=61561123884759" target="_blank">Facebook</a>
+            <a href="https://x.com/AceGamesOF" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/acegamesoficial/" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@acegames_oficial" target="_blank">Tiktok</a>
+            <a href="https://www.youtube.com/channel/UCM9VL6WKzhGRqNYKvHr5P8Q" target="_blank">YouTube</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
